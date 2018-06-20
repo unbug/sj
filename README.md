@@ -1,9 +1,11 @@
+<img src="https://user-images.githubusercontent.com/799578/41671640-51642072-74ea-11e8-8bf2-7588062eed70.png" width="300">
+
 # Swift and JavaScript comparison snippets
 Well, I think the most easy way is read the code, just the code!
 
 **Issue and pull request are welcome, please!**
 
-## Basic Operators
+## The Basics
 ### Constants and Variables
 Swift
 
@@ -120,7 +122,7 @@ try {
     // an error was thrown
 }
 ```
-
+## Basic Operators
 ## Strings and Characters
 ## Collection Types
 ## Control Flow
