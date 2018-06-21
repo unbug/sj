@@ -1,7 +1,7 @@
 <img src="https://user-images.githubusercontent.com/799578/41671640-51642072-74ea-11e8-8bf2-7588062eed70.png" width="300">
 
 # Swift and JavaScript comparison snippets
-Well, I think the most easy way to learn Swift and JavaScript in the same time is read the code, just the code!
+The table of content is from [The swift programming language guide](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html).
 
 **Issue and pull request are welcome, please!**
 
@@ -151,7 +151,3 @@ Swift
 JavaScript
 ```javascript
 ```
-
-
-## Resources
-[The swift programming language guide](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)
