@@ -1,9 +1,31 @@
 <img src="https://user-images.githubusercontent.com/799578/41671640-51642072-74ea-11e8-8bf2-7588062eed70.png" width="300">
 
 # Swift and JavaScript comparison snippets
-The table of content is from [The swift programming language guide](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html).
 
 **Issue and pull request are welcome, please!**
+
+# Table of content (from [The swift programming language guide](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html))
+- [The Basics](#the-basics)
+- [Basic Operators](#basic-operators)
+- [Strings and Characters](#strings-and-characters)
+- [Collection Types](#collection-types)
+- [Control Flow](#control-flow)
+- [Functions](#functions)
+- [Closures](#closures)
+- [Enumerations](#enumerations)
+- [Structures and Classes](#structures-and-classes)
+- [Properties](#properties)
+- [Methods](#methods)
+- [Subscripts](#subscripts)
+- [Inheritance](#inheritance)
+- [Initialization](#initialization)
+- [Deinitialization](#deinitialization)
+- [Optional Chaining](#optional-chaining)
+- [Error Handling](#error-handling)
+- [Type Casting](#type-casting)
+- [Nested Types](#nested-types)
+- [Extensions](#extensions)
+- [Protocols](#protocols)
 
 ## The Basics
 ### Constants and Variables
