@@ -4,7 +4,7 @@
 
 **Issue and pull request are welcome, please!**
 
-# Table of content (from [The swift programming language guide](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html))
+# Table of content
 - [The Basics](#the-basics)
 - [Basic Operators](#basic-operators)
 - [Strings and Characters](#strings-and-characters)
@@ -26,6 +26,8 @@
 - [Nested Types](#nested-types)
 - [Extensions](#extensions)
 - [Protocols](#protocols)
+
+> This table of content is from [The swift programming language guide](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)
 
 ## The Basics
 ### Constants and Variables
