@@ -1218,7 +1218,7 @@ reversedNames = names.sorted(by: { (s1: String, s2: String) -> Bool in return s1
 JavaScript
 ```javascript
 // Closure Expressions
-// The Sorted Method
+// The Sort Method
 const names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
 function backward(s1, s2) {
     return s1 < s2
