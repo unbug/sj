@@ -12,20 +12,9 @@
 - [Control Flow](#control-flow)
 - [Functions](#functions)
 - [Closures](#closures)
-- [Enumerations](#enumerations)
-- [Structures and Classes](#structures-and-classes)
-- [Properties](#properties)
-- [Methods](#methods)
-- [Subscripts](#subscripts)
-- [Inheritance](#inheritance)
-- [Initialization](#initialization)
-- [Deinitialization](#deinitialization)
-- [Optional Chaining](#optional-chaining)
+- [Classes and Properties and Methods](#classes-and-properties-and-methods)
+- [Inheritance and Extensions](#inheritance-and-extensions)
 - [Error Handling](#error-handling)
-- [Type Casting](#type-casting)
-- [Nested Types](#nested-types)
-- [Extensions](#extensions)
-- [Protocols](#protocols)
 
 > This table of content is from [The swift programming language guide](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)
 
@@ -1231,20 +1220,9 @@ reversedNames = names.sort((s1, s2) => {
 // or
 reversedNames = names.sort((s1, s2) => return s1 < s2)
 ```
-## Enumerations
-## Structures and Classes
-## Properties
-## Methods
-## Subscripts
-## Inheritance
-## Initialization
-## Deinitialization
-## Optional Chaining
+## Classes and Properties and Methods
+## Inheritance and Extensions
 ## Error Handling
-## Type Casting
-## Nested Types
-## Extensions
-## Protocols
 
 
 Swift
