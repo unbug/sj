@@ -1198,6 +1198,39 @@ console.log("zero!")
 // zero!
 ```
 ## Closures
+Swift
+```swift
+// Closure Expressions
+// The Sorted Method
+let names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
+func backward(_ s1: String, _ s2: String) -> Bool {
+    return s1 > s2
+}
+var reversedNames = names.sorted(by: backward)
+// reversedNames is equal to ["Ewa", "Daniella", "Chris", "Barry", "Alex"]
+reversedNames = names.sorted(by: { (s1: String, s2: String) -> Bool in
+    return s1 > s2
+})
+// or
+reversedNames = names.sorted(by: { (s1: String, s2: String) -> Bool in return s1 > s2 } )
+```
+
+JavaScript
+```javascript
+// Closure Expressions
+// The Sorted Method
+const names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
+function backward(s1, s2) {
+    return s1 < s2
+}
+let reversedNames = names.sort(backward)
+// reversedNames is equal to ["Ewa", "Daniella", "Chris", "Barry", "Alex"]
+reversedNames = names.sort((s1, s2) => {
+    return s1 < s2
+})
+// or
+reversedNames = names.sort((s1, s2) => return s1 < s2)
+```
 ## Enumerations
 ## Structures and Classes
 ## Properties
