@@ -12,9 +12,8 @@
 - [Control Flow](#control-flow)
 - [Functions](#functions)
 - [Closures](#closures)
-- [Classes and Properties and Methods](#classes-and-properties-and-methods)
-- [Inheritance and Extensions](#inheritance-and-extensions)
-- [Error Handling](#error-handling)
+- [Classes](#classes)
+- [Inheritance](#inheritance)
 
 > This table of content is from [The swift programming language guide](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)
 
@@ -1220,15 +1219,221 @@ reversedNames = names.sort((s1, s2) => {
 // or
 reversedNames = names.sort((s1, s2) => return s1 < s2)
 ```
-## Classes and Properties and Methods
-## Inheritance and Extensions
-## Error Handling
-
-
+## Classes
 Swift
 ```swift
+// class definition
+class Counter {
+    var count = 0
+    func increment() {
+        count += 1
+    }
+    func increment(by amount: Int) {
+        count += amount
+    }
+    func reset() {
+        count = 0
+    }
+}
+
+// class instance
+let counter = Counter()
+// the initial count value is 0
+counter.increment()
+// the count's value is now 1
+counter.increment(by: 5)
+// the count's value is now 6
+counter.reset()
+// the count's value is now 0
+
+print("The count property value is \(counter.count)")
+
 ```
 
 JavaScript
 ```javascript
+// class definition
+class Counter {
+    contructor() {
+        this.count = 0
+    }
+    function increment() {
+        this.count += 1
+    }
+    function increment(amount) {
+        this.count += amount
+    }
+    function reset() {
+        this.count = 0
+    }
+}
+
+// class instance
+let counter = Counter()
+// the initial count value is 0
+counter.increment()
+// the count's value is now 1
+counter.increment(5)
+// the count's value is now 6
+counter.reset()
+// the count's value is now 0
+
+console.log(`The count property value is ${counter.count}`)
+```
+
+## Inheritance
+Swift
+```swift
+// Defining a Base Class
+class Vehicle {
+    var currentSpeed = 0.0
+    var description: String {
+        return "traveling at \(currentSpeed) miles per hour"
+    }
+    func makeNoise() {
+        // do nothing - an arbitrary vehicle doesn't necessarily make a noise
+    }
+}
+let someVehicle = Vehicle()
+print("Vehicle: \(someVehicle.description)")
+// Vehicle: traveling at 0.0 miles per hour
+
+
+// Subclassing
+class SomeSubclass: SomeSuperclass {
+    // subclass definition goes here
+}
+class Bicycle: Vehicle {
+    var hasBasket = false
+}
+let bicycle = Bicycle()
+bicycle.hasBasket = true
+
+bicycle.currentSpeed = 15.0
+print("Bicycle: \(bicycle.description)")
+// Bicycle: traveling at 15.0 miles per hour
+
+
+// Subclasses can themselves be subclassed
+class Tandem: Bicycle {
+    var currentNumberOfPassengers = 0
+}
+let tandem = Tandem()
+tandem.hasBasket = true
+tandem.currentNumberOfPassengers = 2
+tandem.currentSpeed = 22.0
+print("Tandem: \(tandem.description)")
+// Tandem: traveling at 22.0 miles per hour
+
+
+// Overriding
+class Train: Vehicle {
+    override func makeNoise() {
+        print("Choo Choo")
+    }
+}
+let train = Train()
+train.makeNoise()
+// Prints "Choo Choo"
+
+
+// Overriding Property Getters and Setters
+class Car: Vehicle {
+    var gear = 1
+    override var description: String {
+        return super.description + " in gear \(gear)"
+    }
+}
+let car = Car()
+car.currentSpeed = 25.0
+car.gear = 3
+print("Car: \(car.description)")
+// Car: traveling at 25.0 miles per hour in gear 3
+```
+
+JavaScript
+```javascript
+// Defining a Base Class
+class Vehicle {
+    constructor() {
+        this.currentSpeed = 0.0
+    }
+    get description() {
+        return `traveling at ${currentSpeed} miles per hour`
+    }
+    function makeNoise() {
+        // do nothing - an arbitrary vehicle doesn't necessarily make a noise
+    }
+}
+let someVehicle = Vehicle()
+console.log(`Vehicle: ${someVehicle.description}`)
+// Vehicle: traveling at 0.0 miles per hour
+
+
+// Subclassing
+class SomeSubclass extends SomeSuperclass {
+    contructor() {
+        super();
+    }
+    // subclass definition goes here
+}
+class Bicycle extends Vehicle {
+    contructor() {
+        super();
+        this.hasBasket = false
+    }
+}
+let bicycle = Bicycle()
+bicycle.hasBasket = true
+
+bicycle.currentSpeed = 15.0
+console.log(`Bicycle: ${bicycle.description}`)
+// Bicycle: traveling at 15.0 miles per hour
+
+
+// Subclasses can themselves be subclassed
+class Tandem extends Bicycle {
+    contructor() {
+        super();
+        this.currentNumberOfPassengers = 0
+    }
+}
+let tandem = Tandem()
+tandem.hasBasket = true
+tandem.currentNumberOfPassengers = 2
+tandem.currentSpeed = 22.0
+console.log("Tandem: \(tandem.description)")
+// Tandem: traveling at 22.0 miles per hour
+
+
+// Overriding
+class Train extends Vehicle {
+    contructor() {
+        super();
+        this.currentNumberOfPassengers = 0
+    }
+    function makeNoise() {
+        console.log("Choo Choo")
+    }
+}
+let train = Train()
+train.makeNoise()
+// Prints "Choo Choo"
+
+
+// Overriding Property Getters and Setters
+class Car extends Vehicle {
+    contructor() {
+        super();
+        this.gear = 1
+    }
+    get description() {
+        return `${super.description} in gear ${gear}`
+    }
+}
+let car = Car()
+car.currentSpeed = 25.0
+car.gear = 3
+console.log(`Car: ${car.description}`)
+// Car: traveling at 25.0 miles per hour in gear 3
 ```
