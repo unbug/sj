@@ -1171,7 +1171,7 @@ function chooseStepFunction(backward) {
     function stepBackward(input) { return input - 1 }
     return backward ? stepBackward : stepForward
 }
-const currentValue = -4
+let currentValue = -4
 const moveNearerToZero = chooseStepFunction(currentValue > 0)
 // moveNearerToZero now refers to the nested stepForward() function
 while (currentValue != 0) {
