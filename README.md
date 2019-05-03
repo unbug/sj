@@ -937,7 +937,7 @@ JavaScript
 ```javascript
 let finalSquare = 25
 let board = []
-for (let i = 0; i < finalSquare.length; i++) {
+for (let i = 0; i <= finalSquare; i++) {
     board[i] = 0;
 }
 board[03] = +08; board[06] = +11; board[09] = +09; board[10] = +02
