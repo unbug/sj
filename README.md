@@ -937,7 +937,7 @@ JavaScript
 ```javascript
 let finalSquare = 25
 let board = []
-for (let i = 0; i < finalSquare.length; i++) {
+for (let i = 0; i <= finalSquare; i++) {
     board[i] = 0;
 }
 board[03] = +08; board[06] = +11; board[09] = +09; board[10] = +02
@@ -1171,7 +1171,7 @@ function chooseStepFunction(backward) {
     function stepBackward(input) { return input - 1 }
     return backward ? stepBackward : stepForward
 }
-const currentValue = -4
+let currentValue = -4
 const moveNearerToZero = chooseStepFunction(currentValue > 0)
 // moveNearerToZero now refers to the nested stepForward() function
 while (currentValue != 0) {
